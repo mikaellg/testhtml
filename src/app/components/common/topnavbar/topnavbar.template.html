@@ -1,0 +1,81 @@
+<div class="row border-bottom">
+  <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+
+
+    <div class="navbar-header">  <!--hidden-lg hidden-md hidden-sm   Aqui-->
+      <a *ngIf="!isDefaultUser" class="minimalize-styl-2 btn hamburguer-menu"
+        (click)="toggleNavigation()">
+        <i class="ti-menu"></i>
+      </a>
+    </div>
+
+    <div *ngIf="isDefaultUser" class="navbar-header">
+      <!-- <div class="col-xs-12"> -->
+        <div class="container-fluid">
+          <img class="img-responsive btn-hover" style="margin: auto;" width="350px;" src="assets/images/logos/companylogo.png" (click)="goHome()"/>
+        </div>
+      <!-- </div> -->
+    </div>
+    <ul class="nav header-top-left navbar-right">
+      <li class="dropdown">
+        <a class="dropdown-toggle count-info black-txt-color"
+        data-toggle="dropdown">
+        {{ currentLanguage?.id | uppercase}}
+      </a>
+      <ul class="dropdown-menu dropdown-messages animated fadeIn"
+      style="width: 170px;">
+      <ng-container *ngFor="let language of languages; trackBy: trackById">
+        <li class="selectable" (click)="selectLanguage(language.id)">
+          <div class="dropdown-language-box">
+            <a class="pull-left">
+              <img alt="image" [attr.src]="language?.image">
+            </a>
+            <div class="media-body">
+              <p class="p-language-flag">{{ language?.name | translate}}</p>
+            </div>
+          </div>
+        </li>
+      </ng-container>
+    </ul>
+  </li>
+
+  <li *ngIf="!isDefaultUser" class="dropdown">
+    <a class="dropdown-toggle count-info" data-toggle="dropdown">
+      <i class="ti-user"></i>{{ userRole | translate}}
+    </a>
+    <ul class="dropdown-menu dropdown-messages animated fadeIn" style="width: 170px;">
+      <li><a [routerLink]="['/app/user/profile']">{{'Profile' | translate}}</a></li>
+      <li class="divider"></li>
+      <li><a (click)="logout()">{{'Logout' | translate}}</a></li>
+  </ul>
+</li>
+
+<!-- <li class="dropdown">
+  <a class="dropdown-toggle count-info" data-toggle="dropdown">
+    <i class="ti-bell"></i><span class="label label-darkcyan">0</span>
+  </a>
+</li> -->
+
+
+
+  <li>
+    <ng-container *ngIf="isDefaultUser; then defaultUser; else notDefaultUser">
+
+    </ng-container>
+
+    <ng-template #defaultUser>
+      <a (click)="login()">
+        <!-- <i class="ti-power-off"></i> -->
+        <span>{{'Login' | translate}}</span>
+      </a>
+    </ng-template>
+    <ng-template #notDefaultUser>
+      <a (click)="logout()">
+        <i class="ti-power-off"></i><span>{{'Logout'
+          | translate}}</span>
+        </a>
+      </ng-template>
+    </li>
+  </ul>
+</nav>
+</div>

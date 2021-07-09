@@ -1,0 +1,49 @@
+
+
+.e-grid .e-rowcell.customcss{
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #676a6c;
+  overflow-x: hidden
+}
+
+.e-grid .e-headercell.customcss{
+  font-family: "Oswald", "Lato", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #676a6c;
+}
+.grid{
+  border-color: #ffffff;
+  border-top:  #ffffff;
+}
+.grid .e-gridheader {
+  background-color: #fff;
+  border-bottom-color: #e0e0e0;
+  border-top-color: #ffffff;
+}
+
+.e-grid .e-headercelldiv {
+  font-size:14px;
+}
+
+.e-pager .e-currentitem.customcss, .e-pager.customcss .e-currentitem:hover {
+  background: #01153F;
+  color: #fff;
+  opacity: 1;
+}
+
+
+.e-pager .e-spacing, .e-pager .e-numericitem:hover, .e-pager .e-currentitem {
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 6px;
+  text-decoration: none;
+}
+
+.e-pager .e-currentitem, .e-pager .e-currentitem:hover {
+  background: #01153F;
+  color: #fff;
+  opacity: 1;
+}
+
+

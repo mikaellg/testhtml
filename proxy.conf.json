@@ -1,0 +1,7 @@
+{
+	"/RI2/*":{
+		"target":"http://remote.scheidt-bachmann.be",
+		"secure": false,
+		"changeOrigin": true
+	}
+}

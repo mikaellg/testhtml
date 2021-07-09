@@ -1,0 +1,99 @@
+
+.gradient-dcyan-lazur{
+  background-image: linear-gradient(135deg,$blue, $lazur);
+  background-color: $blue !important;
+  color: #ffffff;
+}
+
+.mat-focused .mat-form-field-label {
+  color: $blue !important;
+}
+
+.mat-form-field-ripple {
+  background-color: $blue !important;
+}
+
+.ex span {
+  //opacity: 0.8;
+  color: $blue;
+  transition: opacity 1300ms;
+}
+
+.ex span:nth-child(1)  { transition-delay:  200ms }
+.ex span:nth-child(2)  { transition-delay: 1200ms }
+.ex span:nth-child(3)  { transition-delay:  800ms }
+.ex span:nth-child(4)  { transition-delay:  300ms }
+.ex span:nth-child(5)  { transition-delay:  700ms }
+.ex span:nth-child(6)  { transition-delay:  600ms }
+.ex span:nth-child(7)  { transition-delay:  400ms }
+.ex span:nth-child(8)  { transition-delay:  900ms }
+.ex span:nth-child(9)  { transition-delay:  700ms }
+.ex span:nth-child(10) { transition-delay:   50ms }
+
+
+.ex {
+  &:hover span {
+    opacity: 1;
+  }
+}
+
+.dropdown-menu.dropdown-messages .selectable :hover {
+  background-color: whitesmoke !important;
+}
+
+.selectable {
+  cursor: pointer;
+  display: inline-block !important;
+}
+
+
+.bs-datepicker-head {
+  background-color: $esmerald !important;
+}
+
+.bs-datepicker-body {
+  table {
+    td {
+      span.selected,
+      &.selected span,
+      span[class*="select-"]:after,
+      &[class*="select-"] span:after {
+        background-color: $esmerald !important;
+      }
+      &.week span {
+        color: $esmerald !important;
+      }
+    }
+  }
+}
+
+.container-product-img-cart {
+  height: 100px;
+  width: 100%;
+  position: relative;
+}
+
+.container-product-img {
+  height: 250px;
+  width: 100%;
+  position: relative;
+}
+
+.img-product {
+  display: block;
+  width: auto;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  }
+
+.card-faceout-container {
+  padding: 0 5px;
+}

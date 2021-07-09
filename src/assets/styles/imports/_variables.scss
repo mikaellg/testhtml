@@ -1,0 +1,55 @@
+//Basic Colors
+$navy: #1ab394;
+$dark-gray: #c2c2c2;  // Default color
+//$blue: #1c84c6;       // Success color
+$lazur: #23c6c8;      // Info color
+$yellow: #f8ac59;     // Warning color
+$red: #d32d27;        // Danger color
+$yellow-new: #ffb52f;
+
+// Various colors
+$text-color: #676a6c;   // Body text
+$text-white-color: #FFFF;
+$gray: #EDEDED;         // Background wrapper color
+$light-gray: #D1DADE;   // Default label, badge
+$label-badge-color: #5E5E5E;
+$light-blue: #B6D6F2;
+$blue:#01153F;
+$esmerald: #025E72;
+$white: #FFFFFF;
+
+// Spiner color and margin
+$primary-color: $blue;
+$spin-color: $primary-color;
+$spin-margin: 0 auto;
+
+
+// IBOX colors ( default panel colors)
+$border-color: #e7eaec;     // IBox border
+$ibox-title-bg:#ffffff;     // IBox Background header
+$ibox-content-bg:#ffffff;   // IBox Background content
+
+//Width and height
+$sidebar-width: 220px;
+$cart-scroll-height: 300px;
+$cart-scroll-width: 320px;
+
+// Assets path
+$asset-path : "assets/styles/patterns";
+
+// Boxed layout width
+$boxed-width: 1200px;
+$boxed-background: url('../patterns/shattered.png');
+
+//Border radius for buttons
+$btn-border-radius: 0;
+
+//Navigation
+$nav-bg: #a79898;
+$nav-profile-pattern: url('../patterns/header-profile.png');
+$nav-active-color: $esmerald;
+
+//Fonts
+$title-font: 'Oswald', 'Lato', sans-serif;
+$text-font: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+

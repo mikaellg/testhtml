@@ -1,0 +1,83 @@
+<div class="ibox ">
+    <div class="ibox-content">
+        <div class="row">
+
+
+                          <form  class="form-horizontal form-new-design">
+                            <div class="form-group">
+                              <label class="col-md-2 col-form-label">{{'Id' | translate}}</label>
+                              <div class="col-md-4">
+                                <input id="id"  type="text" class="form-control" disabled />
+                              </div>
+                              <label class="col-md-2 col-form-label">{{'Identification' | translate}}</label>
+                              <div class="col-md-4">
+                                <input id="code"  type="text" class="form-control text-uppercase text-uppercase" [ngStyle]="styleInput" />
+                              </div>
+                            </div>
+                      
+                            <div class="form-group">
+                              <label class="col-md-2 col-form-label">{{'Name' | translate}}</label>
+                              <div class="col-md-10">
+                                <input id="driverName"  type="text" class="form-control text-uppercase" [ngStyle]="styleInput"  />
+                              </div>
+                            </div>
+                      
+                            <div class="form-group">
+                              <label class=" col-md-2 col-form-label">{{'Address' | translate}}</label>
+                              <div class="col-md-10">
+                                <input id="driverAddress"  type="text" class="form-control text-uppercase" [ngStyle]="styleInput"  />
+                              </div>
+                            </div>
+                      
+                            <div class="form-group">
+                              <label class="col-md-2 col-form-label">{{'Phones' | translate}}</label>
+                              <div class="col-md-10">
+                                <input id="driverPhone" type="text" class="form-control text-uppercase" [ngStyle]="styleInput" />
+                              </div>
+                            </div>
+                      
+                            <div class="form-group">
+                                <label class=" col-md-2 col-form-label">{{'License' | translate}}</label>
+                                <div class="col-md-4">
+                                  <input id="driverLicense"  type="text" class="form-control text-uppercase" [ngStyle]="styleInput" />
+                                </div>
+                                <label class="col-md-2 col-form-label">{{'Type' | translate}}</label>
+                                <div class="col-md-4">
+                                        <select id="Status" class="form-control">
+                                            <option value="0"  disabled selected>{{ 'SelectType' | translate }}</option>
+                                        </select>
+                                </div>
+                            </div>
+                      
+                            <div class="form-group">
+                              <label class="col-md-2 col-form-label">{{'User' | translate}}</label>
+                              <div class="col-md-10">
+                                  <div class="animated input-group " style="height:34px">
+                                    <input type="text" 
+                                    
+                                    placeholder="SelectUser"
+                                    class="form-control"/>
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-yellow" style="height:34px">
+                                              <i class="ti-search"></i>
+                                            </button>
+                                        </span>      
+                                  </div>
+                              </div>
+                            </div>
+                            
+
+                            <div  class="form-group p-h-sm text-center">
+                              <button type="submit" mat-button class="btn btn-yellow-lg">
+                                <i class="ti-save"></i>{{'Close' | translate}}
+                              </button>
+                            </div>
+                     
+                      
+                          </form>
+
+
+
+        </div>
+    </div>
+</div>
