@@ -1,54 +1,153 @@
 <div class="ibox ">
-    <div class="ibox-content">
-        
+  <div class="p-h-xl">
+    <div class="col-md-12 col-centered">
+        <div class="tabs-container">
+          <ul class="nav nav-tabs" role="tablist">
+              <li><a id="tab-01" class="nav-link active" data-toggle="tab" href="#tab-1">Datos</a></li>
+              <li><a class="nav-link" data-toggle="tab" href="#tab-2">Contacto</a></li>
+          </ul>
+          <div class="tab-content">
+              <div role="tabpanel" id="tab-1" class="tab-pane active" >
+                  <div class="panel-body">
+                    <!--formControlName="CustomerID"-->
+                    <div class="form-group row">
+                      <label class="col-md-2 col-form-label">{{'ID' | translate}}</label>
+                      <div class="col-md-3">
+                        <input  id="CustomerID" formControlName="CustomerID" class="form-control text-uppercase" type="text"/>
+                      </div>
+                      <label class="col-md-1 col-form-label">{{'TaxId' | translate}}</label>
+                      <div class="col-md-3">
+                        <input id="TaxId" formControlName="TaxId" class="form-control text-uppercase" type="text" />
+                      </div>
 
-                    <div class="row">
-                      <div class="col-sm-12">
-                          <div class="col-sm-4">
-                              <div class="form-group">
-                                  <h5 class="Noesp"><b>{{ 'Factura No.:' | translate }}</b></h5>
-                                  <input class="form-control" style="text-align: right" value="001-001-00000001" readonly>
-                              </div>
-                              <div class="form-group">
-                                  <h5 class="Noesp"><b>{{ 'Id Único:' | translate }}</b></h5>
-                                  <input class="form-control" style="text-align: right" value="000001" readonly>
-                              </div>
-                          </div>
-                          <div class="col-sm-4">
-                              <div class="form-group">
-                                  <h5 class="Noesp">{{ 'Date' | translate }}</h5>
-                                  <div class="input-group date">
-                                      <span class="input-group-addon" (click)="dp.toggle()" [attr.aria-expanded]="dp.isOpen"><i class="fa fa-calendar"></i></span>
-                                      <input id="date_added" type="text" class="form-control"
-                                        #dp="bsDatepicker"
-                                        bsDatepicker
-                                        
-                                        [bsConfig]="bsSettings"
-                                      >
-                                  </div>
-                              </div>
-                              <div class="form-group">
-                                  <h5 class="Noesp">{{ 'Vendedor' | translate }}</h5>
-                                  <select id="vendedor"  class="form-control" >
-                                    <option value="0"  disabled selected>{{ 'SelectSalesMan' | translate }}</option>
-                                  </select>
-                              </div>
-                          </div>
-                          <div class="col-sm-4">
-                              <div class="row">
-                                  <label class="col-sm-4 col-form-label">{{'Cedula/RUC:' | translate}}</label>
-                                  <label class="col-sm-8 col-form-label">130873882001</label>
-                              </div>
-                              <div class="row">
-                                  <label class="col-sm-4 col-form-label">{{'Compañia:' | translate}}</label>
-                                  <label class="col-sm-8 col-form-label">Mi compañia ABC</label>
-                              </div>
-           
-                          </div>      
+                      <label class="col-md-1 col-form-label" >{{'Code' | translate}}</label>
+                      <div class="col-md-2">
+                        <input id="Id" formControlName="Code" maxlength="10" class="form-control text-uppercase" type="text" />
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-md-2 col-form-label">{{'Razón Social' | translate}}</label>
+                      <div class="col-md-10">
+                        <input id="Name" formControlName="Name" class="form-control text-uppercase" type="text"  />
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-md-2 col-form-label">{{'Nombre Comercial' | translate}}</label>
+                      <div class="col-md-7">
+                        <input id="CompanyName" formControlName="CompanyName" class="form-control full-width text-uppercase" type="text" />
+                      </div>
+                      <label class="col-md-1 col-form-label">{{'Zone' | translate}}</label>
+                      <div class="col-md-2">
+                        <select id="Zone" formControlName="Zone" class="form-control">
+                          <option value="0"  disabled selected>{{ 'SelectZone' | translate }}</option>
+                          <option [value]="item.Id" *ngFor="let item of listZone">{{item.Name | titlecase }}</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-md-2 col-form-label">{{'Dirección' | translate}}</label>
+                      <div class="col-md-10">
+                        <input id="Address" formControlName="Address" class="form-control full-width text-uppercase" type="text" />
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-md-2 col-form-label">{{'Ciudad' | translate}}</label>
+                      <div class="col-md-3">
+                        <input id="City" formControlName="City" class="form-control text-uppercase" type="text" />
+                      </div>
+                      <label class="col-md-1 col-form-label">{{'State' | translate}}</label>
+                      <div class="col-md-3">
+                        <input id="State" formControlName="State" class="form-control text-uppercase" type="text" />
+                      </div>
+                      <label class="col-md-1 col-form-label">{{'Country' | translate}}</label>
+                      <div class="col-md-2">
+                        <select  id="CountryCode" formControlName="CountryCode" class="form-control">
+                          <option value="0"  disabled selected>{{ 'SelectCountry' | translate }}</option>
+                          <option [value]="item.ID_PAIS" *ngFor="let item of listCountry">{{item.NOMBRE | titlecase }}</option>
+                        </select>
+
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-md-2 col-form-label">{{'SalesPeopleID' | translate}}</label>
+                      <div class="col-md-3">
+                        <select formControlName="SalesPeopleID" class="form-control">
+                          <option value="0"  disabled selected>{{ 'SelectSalesmans' | translate }}</option>
+                          <option [value]="item.Id" *ngFor="let item of listSalesmans">{{item.Name | titlecase }}</option>
+                        </select>
+                      </div>
+
+                      <label class="col-md-1 col-form-label">{{'Grupo' | translate}}</label>
+                      <div class="col-md-3">
+                        <select formControlName="GroupID" class="form-control">
+                          <option value="0"  disabled selected>{{ 'SelectGroup' | translate }}</option>
+                          <option [value]="item.Id" *ngFor="let item of listGroups">{{item.Name | titlecase }}</option>
+                        </select>
+                      </div>
+
+                      <label class="col-md-1 col-form-label">{{'Precio' | translate}}</label>
+                      <div class="col-md-2">
+                        <select formControlName="DefaultPrice" class="form-control">
+                          <option value="0"  disabled selected>{{ 'SelectPrecio' | translate }}</option>
+                          <option [value]="item.id" *ngFor="let item of listPrecio">{{item.name | titlecase }}</option>
+                        </select>
+                      </div>
+
+                    </div>
+
+
+
+
+                    <!--
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">{{'Name' | translate}}</label>
+                      <div class="col-sm-9">
+                        <input id="name" class="form-control full-width text-uppercase"
+                          type="text" formControlName="name" />
                       </div>
                     </div>
 
 
-        
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">{{'Email' | translate}}</label>
+                      <div class="col-sm-9">
+                        <input id="email" class="form-control full-width" type="text"
+                          formControlName="email" email=true />
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">{{'Phone' | translate}}</label>
+                      <div class="col-sm-9">
+                        <input id="phoneNumber" class="form-control full-width" type="text"
+                          formControlName="phoneNumber" />
+                      </div>
+                    </div>
+                     -->
+
+
+
+
+                  </div>
+              </div>
+              <div role="tabpanel" id="tab-2" class="tab-pane">
+                  <div class="panel-body">
+
+                    <div class="form-group row">
+                      <label class="col-md-2 col-form-label">{{'email' | translate}}</label>
+                      <div class="col-md-10">
+                        <input id="Email" formControlName="Email" class="form-control text-uppercase" type="text" />
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
     </div>
+  </div>
 </div>
